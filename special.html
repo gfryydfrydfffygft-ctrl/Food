@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelloCoder - Authentic Myanmar Flavors</title>
+    <link rel="stylesheet" href="special.css">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                   <a href="#"><strong class="BrandName">Eonix</strong></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn" id="nationBtn">Nation ▾</a>
+                        <ul class="dropdown-content" id="nationDropdown">
+                            <li><a href="kachin.html">Kachin</a></li>
+                            <li><a href="kayah.html">Kayah</a></li>
+                            <li><a href="kayin.html">Kayin</a></li>
+                            <li><a href="chin.html">Chin</a></li>
+                            <li><a href="mon.html">Mon</a></li>
+                            <li><a href="rakhine.html">Rakhine</a></li>
+                            <li><a href="shan.html">Shan</a></li>
+                            <li><a href="burma.html">Burma</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="special.html">Special</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+         <header>
+        <div class="hero">
+            <h1>စားသုံးရန် အကြုံပြုသော <span class="highlight">အထူးဟင်းလျာများ</span></h1>
+            <p>လတ်ဆတ်သန့်ရှင်းပြီး အရသာရှိသော အစားအစာများကို ပျော်ရွှင်စွာ စားသုံးရင်း အမှတ်တရများစွာ ဖန်တီးလိုက်ပါ။</p>
+        </div>
+    </header>
+    <main class="container1">
+  <div class="image-part1">
+    <img src="bannerthree.jpg" alt="Description">
+  </div>
+  <div class="text-part1">
+    <h2>မုန့်ဟင်းခါး</h2>
+    <p>​မုန့်ဟင်းခါးဟာ ပုဂံခေတ်ကတည်းက ရှိခဲ့တယ်လို အချိုက ယူဆကြပြီး ရှေးမြန်မာဘုရင်တွေရဲ့ နန်းတွင်းစားသောက်ဖွယ်ရာစာရင်းမှာ "မုန့်ဟင်း" ဆိုတဲ့ အမည်နဲ့ ပါဝင်ခဲ့ပါတယ်။ မူလက ငါးနဲ့ချက်တဲ့ "မုန့်ဟင်း" ကိုမှ ငရုတ်ကောင်းအရသာကြောင့် အနည်းငယ် ခါးသက်သက်ရှိတာကို အစွဲပြုပြီး "မုန့်ဟင်းခါး" လို ခေါ်တွင်လာတာပါ။ မြန်မာတစ်နိုင်ငံလုံးရဲ့ ဘယ်နေရာမှာမဆို ရရှိနိုင်တဲ့ ကိုယ်စားပြု အစားအစာတစ်ခု ဖြစ်ပါတယ်။</p>
+  </div>
+</main>
+    <main class="container2">
+  <div class="image-part2">
+    <img src="bannerthree.jpg" alt="Description">
+  </div>
+  <div class="text-part2">
+    <h2>မုန့်ဟင်းခါး</h2>
+    <p>​မုန့်ဟင်းခါးဟာ ပုဂံခေတ်ကတည်းက ရှိခဲ့တယ်လို အချိုက ယူဆကြပြီး ရှေးမြန်မာဘုရင်တွေရဲ့ နန်းတွင်းစားသောက်ဖွယ်ရာစာရင်းမှာ "မုန့်ဟင်း" ဆိုတဲ့ အမည်နဲ့ ပါဝင်ခဲ့ပါတယ်။ မူလက ငါးနဲ့ချက်တဲ့ "မုန့်ဟင်း" ကိုမှ ငရုတ်ကောင်းအရသာကြောင့် အနည်းငယ် ခါးသက်သက်ရှိတာကို အစွဲပြုပြီး "မုန့်ဟင်းခါး" လို ခေါ်တွင်လာတာပါ။ မြန်မာတစ်နိုင်ငံလုံးရဲ့ ဘယ်နေရာမှာမဆို ရရှိနိုင်တဲ့ ကိုယ်စားပြု အစားအစာတစ်ခု ဖြစ်ပါတယ်။</p>
+  </div>
+</main>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const nationBtn = document.getElementById('nationBtn');
+            const nationDropdown = document.getElementById('nationDropdown');
+
+            // Toggle dropdown on click
+            nationBtn.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevents the window click listener from firing immediately
+                nationDropdown.classList.toggle('show');
+            });
+
+            // Close the dropdown if the user clicks anywhere else on the page
+            window.addEventListener('click', (event) => {
+                if (!event.target.matches('#nationBtn')) {
+                    if (nationDropdown.classList.contains('show')) {
+                        nationDropdown.classList.remove('show');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
